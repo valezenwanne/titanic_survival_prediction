@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1"> 
+        <title>Titanic Survival Prediction</title>
+
+        <style>
+            .content {
+                max-width: 500px;
+                margin: auto;
+            }
+
+
+           
+        </style>
+    </head>
+
+    <body >
+        <div class="content">
+        <div>
+            <h2>Titanic Survival Prediction </h2>
+            
+        </div>
+
+        
+
+        <div>
+        <form action="/predict" method="POST">
+            <fieldset>
+                <h3>
+                    Survival Prediction Form
+                </h3>
+
+                <label for="Pclass">Passenger Class:</label>
+                <input type="text", name="Pclass"><br><br>
+
+
+                <label for="Sex">Sex:</label>
+                <select name="Sex">
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                </select><br><br>
+
+
+                <label for="Age">Age:</label>
+                <input type="text", name="Age"><br><br>
+
+                <label for="SibSp">Number of Sibling/Spouse:</label>
+                <input type="text", name="SibSp"><br><br>
+
+                <label for="Parch">Number of Parents:</label>
+                <input type="text", name="Parch"><br><br>
+
+                
+
+
+            <br>
+            
+            <button type="submit", value="predict">Predict</button>
+            <button type="reset", value="reset">Reset</button>
+
+        </fieldset>
+        </form>
+
+        </div>
+
+        <div>
+            <h3 style="color: blueviolet;">
+                {{prediction_text}}
+            </h3>
+        </div>
+        </div>
+    </body>
+</html>
